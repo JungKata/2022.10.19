@@ -1,3 +1,5 @@
+import { type } from "os";
+
 interface Multimedia{
     cim : string;
 
@@ -67,9 +69,30 @@ let f : Multimedia = new Film('DieHard', 1865);
 let termekek : Multimedia[] = [
  new Zene('let it go', 183),
  new Konyv('The Lord of the Rings'),
+ new Film('Die Hard', 1865),
 ];
 
 for(let termek of termekek){
     termek.kiir();
 }
 
+
+
+
+/*interface Stremelheto {
+    cim : string;
+    hossz : number;
+}*/
+
+type Stremelheto = {
+    cim : string;
+    hossz : number;
+}
+
+type Alaptipus = number | boolean | string;
+
+let StreamelhetoTermekek: Stremelheto[] = [
+ new Film('Harry Potter', 2000),
+ new Zene('Sweet child of mine',200),
+ {cim: 'Thunderstruck', hossz:198},
+];

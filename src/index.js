@@ -11,6 +11,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _Konyv_cim;
+Object.defineProperty(exports, "__esModule", { value: true });
 class Zene {
     constructor(cim, hossz) {
         this.cim = cim;
@@ -58,7 +59,13 @@ let f = new Film('DieHard', 1865);
 let termekek = [
     new Zene('let it go', 183),
     new Konyv('The Lord of the Rings'),
+    new Film('Die Hard', 1865),
 ];
 for (let termek of termekek) {
     termek.kiir();
 }
+let StreamelhetoTermekek = [
+    new Film('Harry Potter', 2000),
+    new Zene('Sweet child of mine', 200),
+    { cim: 'Thunderstruck', hossz: 198 },
+];
