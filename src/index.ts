@@ -45,6 +45,25 @@ class Konyv implements Multimedia{
     }
 
 }
+
+class Film{
+    cim : string;
+    hossz: number;
+
+    constructor(cim: string, hossz: number ){
+        this.cim = cim;
+        this.hossz = hossz;
+    }
+    kiir(): void {
+        console.log(this.toString());
+    }
+    toString(): string {
+        return this.cim + " (" + this.hossz + " s) ";
+    }
+}
+
+let f : Multimedia = new Film('DieHard', 1865);
+
 let termekek : Multimedia[] = [
  new Zene('let it go', 183),
  new Konyv('The Lord of the Rings'),

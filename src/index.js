@@ -42,6 +42,19 @@ class Konyv {
     }
 }
 _Konyv_cim = new WeakMap();
+class Film {
+    constructor(cim, hossz) {
+        this.cim = cim;
+        this.hossz = hossz;
+    }
+    kiir() {
+        console.log(this.toString());
+    }
+    toString() {
+        return this.cim + " (" + this.hossz + " s) ";
+    }
+}
+let f = new Film('DieHard', 1865);
 let termekek = [
     new Zene('let it go', 183),
     new Konyv('The Lord of the Rings'),
