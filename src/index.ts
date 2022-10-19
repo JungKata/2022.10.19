@@ -22,3 +22,35 @@ class Zene implements Multimedia{
     }
     
 }
+
+class Konyv implements Multimedia{
+    #cim: string;
+
+    constructor(cim : string){
+        this.#cim = cim;
+    }
+
+    get cim(){
+      return this.#cim;
+    }
+    set cim(cim : string){
+        this.#cim = cim;
+    }
+
+    kiir(): void {
+        console.log(this.toString());
+    }
+    toString(): string {
+        return this.#cim;
+    }
+
+}
+let termekek : Multimedia[] = [
+ new Zene('let it go', 183),
+ new Konyv('The Lord of the Rings'),
+];
+
+for(let termek of termekek){
+    termek.kiir();
+}
+
